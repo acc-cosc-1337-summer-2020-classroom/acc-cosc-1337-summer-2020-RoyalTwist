@@ -10,4 +10,6 @@ int autoreturn()
     auto num = 1;
     auto doub = 1.1;
     auto streeng = "jeffbruh";
+
+    return 0;
 }
