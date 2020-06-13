@@ -13,7 +13,7 @@ int sum_of_squares(int num)
     {
         sum += (i * i);
     }
-    return 
+    return sum;
 }
 
 
