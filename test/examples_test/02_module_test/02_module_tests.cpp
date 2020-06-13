@@ -7,6 +7,10 @@ TEST_CASE("Verify Test Configuration", "verification") {
 
 /*Test case operator precedence 1 with function argument values 12, 6 and 3 returns 14*/
 
+TEST_CASE("Verify ") {
+	REQUIRE(true == true);
+}
+
 /*Test case operator precedence 2 with function argument values 12, 6 and 3 returns 6*/
 
 /*Test case operator precedence 3 with function argument values 12, 6 and 3 returns 6*/

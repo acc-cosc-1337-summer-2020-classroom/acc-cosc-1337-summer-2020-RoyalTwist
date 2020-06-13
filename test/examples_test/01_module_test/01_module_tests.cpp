@@ -3,6 +3,7 @@
 #include "vars.h"
 #include "input.h"
 #include "numbers.h"
+#include "chars.h"
 #include<string>
 
 
@@ -36,5 +37,16 @@ TEST_CASE("Verify adding .3 3 times to 0 equals .9")
 
 /*test case char test ASCII values */
 
+TEST_CASE("Verify inputting character 'a' outputs 97")
+{
+	REQUIRE(get_char_ascii_value('a') == 97);
+}
+
 /*test case string test ASCII values Joe characters are equal to 74, 111, and 101*/
 
+TEST_CASE("Verify inputting joes characters output proper ints")
+{
+	REQUIRE(get_char_ascii_value('J') == 74);
+	REQUIRE(get_char_ascii_value('o') == 111);
+	REQUIRE(get_char_ascii_value('e') == 101);
+}
