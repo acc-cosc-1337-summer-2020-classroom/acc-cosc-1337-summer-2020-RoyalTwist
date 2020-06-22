@@ -26,30 +26,34 @@ GPA 3.0
 */
 int main() 
 {
-	string letter_grade;
+	string letter_grade, contstring;
 	int credit_hours, sum_credit_hours = 0, sum_credit_points = 0;
+	bool contloop = true;
 
-	cout << "Enter letter grade: ";
-	cin >> letter_grade;
-	cout << "Enter credit hours: ";
-	cin >> credit_hours;
-	sum_credit_points += get_grade_points(letter_grade) * credit_hours;
-	sum_credit_hours += credit_hours;
-
-	cout << "Enter letter grade: ";
-	cin >> letter_grade;
-	cout << "Enter credit hours: ";
-	cin >> credit_hours;
-	sum_credit_points += get_grade_points(letter_grade)  * credit_hours;
-	sum_credit_hours += credit_hours;
-
-	cout << "Enter letter grade: ";
-	cin >> letter_grade;
-	cout << "Enter credit hours: ";
-	cin >> credit_hours;
-	sum_credit_points += get_grade_points(letter_grade)  * credit_hours;
-	sum_credit_hours += credit_hours;
-
+	do 
+	{
+		cout << "Enter letter grade: ";
+		cin >> letter_grade;
+		cout << "Enter credit hours: ";
+		cin >> credit_hours;
+		sum_credit_points += get_grade_points(letter_grade) * credit_hours;
+		sum_credit_hours += credit_hours;
+		cout << "Do you want to continue? enter Y or N: ";
+		cin >> contstring;
+		if (contstring.compare("Y") == 0 || contstring.compare("y") == 0)
+		{
+			contloop = true;
+		}
+		else if (contstring.compare("N") == 0 || contstring.compare("n") == 0)
+		{
+			contloop = false;
+		}
+		else
+		{
+			contloop = false;
+		}
+	}
+	while (contloop);
 
 	double gpa = calculate_gpa(sum_credit_hours, sum_credit_points);
 	cout << "GPA: " << gpa;
