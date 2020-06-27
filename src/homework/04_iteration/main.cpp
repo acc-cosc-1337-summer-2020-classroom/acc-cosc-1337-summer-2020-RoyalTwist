@@ -1,4 +1,6 @@
 //write include statements
+#include "dna.h"
+#include <iostream>
 
 //write using statements
 
@@ -12,5 +14,7 @@ user enters a y or Y.
 */
 int main() 
 {
+	std::cout<<get_gc_content("AGCTATAG");
+
 	return 0;
 }
