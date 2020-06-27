@@ -7,17 +7,17 @@ Iterate string count Gs and Cs, divide count by string length.
 Return quotient.
 */
 
-double get_gc_content(const std::string name)
+double get_gc_content(const std::string dna)
 {
     double gc = 0;
-    for (size_t i = 0; i <= name.length()-1; i++)
+    for (int i = 0; i < dna.length(); i++)
     {
-        if (name[i] == 'G' || name[i] == 'C')
+        if (dna[i] == 'G' || dna[i] == 'C')
         {
             gc += 1;
         }
     }
-    return gc / name.size();
+    return gc / dna.size();
 }
 
 /*
@@ -25,12 +25,14 @@ Write code for function get_reverse_string that
 accepts a string parameter and returns a string reversed.
 */
 
-std::string get_reverse_string(std::string name)
+std::string get_reverse_string(std::string dna)
 {
-    std::string reverse = "";
-    for (size_t i = name.length()-1; i >= 0; i--)
+    std::string reverse = dna;
+    int j = 0;
+    for (int i = dna.length()-1; i >= 0; i--)
     {
-        reverse.append("" + name[i]);
+        reverse[j] = dna[i];
+        j++;
     }
     return reverse;
 }
@@ -51,13 +53,13 @@ std::string get_dna_complement(std::string dna)
     std::string revstring = get_reverse_string(dna);
     std::string returnstring = "";
 
-    for (size_t i = 0; i <= dna.length()-1; i++)
+    for (int i = 0; i <= revstring.length()-1; i++)
     {
-        if (dna[i] == 'A') returnstring.append("T");
-        else if (dna[i] == 'T') returnstring.append("A");
-        else if (dna[i] == 'C') returnstring.append("G");
-        else if (dna[i] == 'G') returnstring.append("C");
-        else returnstring.append("" + dna[i]);
+        if (revstring[i] == 'A') returnstring.append("T");
+        else if (revstring[i] == 'T') returnstring.append("A");
+        else if (revstring[i] == 'C') returnstring.append("G");
+        else if (revstring[i] == 'G') returnstring.append("C");
+        else returnstring.append("" + revstring[i]);
     }
     return returnstring;
     

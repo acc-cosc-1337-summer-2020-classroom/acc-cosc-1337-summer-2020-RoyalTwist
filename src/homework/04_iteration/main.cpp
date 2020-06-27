@@ -15,6 +15,11 @@ user enters a y or Y.
 int main() 
 {
 	std::cout<<get_gc_content("AGCTATAG");
+	std::cout<<get_gc_content("CGCTATAG");
+	std::cout<<get_reverse_string("AGCTATAG");
+	std::cout<<get_reverse_string("CGCTATAG");
+	std::cout<<get_dna_complement("AAAACCCGGT");
+	std::cout<<get_dna_complement("CCCGGAAAAT");
 
 	return 0;
 }
