@@ -1,5 +1,4 @@
 #include "dna.h"
-#include <iostream>
 /*
 Write code for function get_gc_content that accepts
 a const reference string parameter and returns a double.
@@ -15,7 +14,6 @@ double get_gc_content(const std::string name)
     {
         if (name[i] == 'G' || name[i] == 'C')
         {
-            std::cout<<"fe";
             gc += 1;
         }
     }
