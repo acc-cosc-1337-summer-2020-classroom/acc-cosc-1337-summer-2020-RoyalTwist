@@ -20,8 +20,10 @@ int main()
 
 	} while (tic_tac_toe.game_over() == false);
 
-	std::cout<<"Game over";
-	
+	std::cout<<"Game over!\n";
+
+	if (tic_tac_toe.get_winner()!="C") std::cout<<tic_tac_toe.get_winner()<<" wins!";
+	else std::cout<<"It's a Tie!";
 
 	return 0;
 }
